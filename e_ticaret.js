@@ -74,8 +74,8 @@ addToCartButtons.forEach((button) => {
         return;
       }
 
-      // Benzersiz ID oluşturma (isim + fiyat + resim)
-      const productId = productName + productPrice + productImage;
+      // Benzersiz ID oluşturma (sadece ürün adına göre)
+      const productId = productName.toLowerCase().trim();
 
       // Aynı üründen var mı kontrol et
       const existingProduct = cart.find((item) => item.id === productId);

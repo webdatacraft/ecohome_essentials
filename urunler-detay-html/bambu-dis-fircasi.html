@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bambu Diş Fırçası</title>
+    <link rel="stylesheet" href="../styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body class="urun-detay-body">
+    <header class="header">
+      <div class="container">
+        <h1 class="logo">EcoHome Essentials</h1>
+        <nav class="nav">
+          <ul>
+            <li><a href="../index.html">Ana Sayfa</a></li>
+            <li><a href="../urunler.html">Ürünlerimiz</a></li>
+            <li><a href="../hakkimizda.html">Hakkımızda</a></li>
+            <li><a href="../iletisim.html">İletişim</a></li>
+            <li class="cart-container">
+              <a href="#cart" id="cart-btn" class="cart-btn">
+                <i class="fas fa-shopping-cart"></i>
+                <span id="cart-count">0</span>
+              </a>
+              <div class="menu-favorite-btn" id="favorite-btn">
+                <i class="fas fa-heart" id="heart-icon"></i>
+                <span id="favorite-count">0</span>
+              </div>
+              <div
+                id="favorite-container"
+                class="favorite-container"
+              >
+                <h2>Favori Ürünler</h2>
+                <p>Henüz favori ürün yok.</p>
+              </div>
+            </li>
+          </ul>
+          <div class="hamburger" id="hamburger">&#9776;</div>
+        </nav>
+      </div>
+    </header>
+    <main class="product-detail" style="margin-top: 80px">
+      <div class="bambu-detay-container">
+        <a href="../urunler.html" class="btn back-btn">
+          <i class="fas fa-arrow-left"></i> Ürünlere Geri Dön
+        </a>
+        <h2 class="urun-detay-baslik">Bambu Diş Fırçası</h2>
+
+        <!-- KART BAŞLANGICI -->
+        <div class="card">
+          <div class="cover">
+            <img src="../images/bambu.jpg" alt="Bambu Ürün Ön Görseli" />
+          </div>
+          <div class="details">
+            <div>
+              <img src="../images/bambu-2.jpg" alt="Bambu Ürün Arka Görseli" />
+              <h3>Bambu Diş Fırçası</h3>
+              <h2>₺124.90</h2>
+              <a href="#">Satın Al</a>
+            </div>
+          </div>
+        </div>
+        <!-- KART BİTİŞ -->
+        <div class="bambu-detay-stars">
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+          <span class="customer-reviews">(23 müşteri yorumu)</span>
+        </div>
+
+        <div class="bambu-detay-aciklama">
+          <h3 class="urun-aciklama-baslik">Ürün Açıklaması</h3>
+          <ul>
+            <li>%100 doğal bambudan üretilmiştir, çevre dostudur.</li>
+            <li>Plastik içermeyen sapı sayesinde doğada çözünebilir.</li>
+            <li>Yumuşak ve hassas kılları diş etlerine zarar vermez.</li>
+            <li>Hem yetişkinler hem de çocuklar için uygundur.</li>
+            <li>Vegan ve hayvanlar üzerinde test edilmemiştir.</li>
+            <li>Hafif ve ergonomik tasarımı ile kolay kavranır.</li>
+            <li>Her fırça ayrı ambalajlıdır, hijyeniktir.</li>
+            <li>Düzenli kullanımda diş ve ağız sağlığınızı destekler.</li>
+            <li>Kullanım sonrası sapı kompost edilebilir.</li>
+          </ul>
+        </div>
+        <button
+          class="btn cart-btn"
+          data-name="Bambu Diş Fırçası"
+          data-price="₺124.90"
+          data-image="../images/bambu.jpg"
+        >
+          <i class="fas fa-shopping-cart"></i> Sepete Ekle
+        </button>
+        <button
+          class="btn favorite-btn"
+          data-name="Bambu Diş Fırçası"
+          data-price="₺124.90"
+          data-image="../images/bambu.jpg"
+        >
+          <i class="fas fa-heart"></i> Favorilere Ekle
+        </button>
+      </div>
+
+      <section class="testimonials" style="margin-top: 40px">
+        <h2>Müşteri Yorumları</h2>
+        <div class="testimonial">
+          <p>"Çok kaliteli ve doğa dostu bir ürün, herkese tavsiye ederim!"</p>
+          <h4>Ayşe K. <span class="yorum-stars">★★★★☆</span></h4>
+        </div>
+        <div class="testimonial">
+          <p>"Kargo hızlıydı, ürün beklediğimden daha iyi çıktı."</p>
+          <h4>Mehmet T. <span class="yorum-stars">★★★★☆</span></h4>
+        </div>
+        <div class="testimonial">
+          <p>"Diş fırçası yumuşak ve kullanışlı, tekrar alacağım."</p>
+          <h4>Elif B. <span class="yorum-stars">★★★★☆</span></h4>
+        </div>
+        <div class="testimonial" style="display: none">
+          <p>"Ürün harika, dişlerim gerçekten daha temiz hissettiriyor."</p>
+          <h4>Deniz A. <span class="yorum-stars">★★★★★</span></h4>
+        </div>
+        <div class="testimonial" style="display: none">
+          <p>
+            "Çevreci olması çok güzel, artık sadece bu diş fırçasını
+            kullanıyorum."
+          </p>
+          <h4>Selin K. <span class="yorum-stars">★★★★☆</span></h4>
+        </div>
+        <div class="testimonial" style="display: none">
+          <p>"Fırçanın sapı elime çok iyi oturuyor, rahat kullanılıyor."</p>
+          <h4>Emre Y. <span class="yorum-stars">★★★★☆</span></h4>
+        </div>
+        <div class="testimonial" style="display: none">
+          <p>"Yumuşak kıllar diş etlerimi tahriş etmiyor, çok memnunum."</p>
+          <h4>Funda D. <span class="yorum-stars">★★★★☆</span></h4>
+        </div>
+        <div class="testimonial" style="display: none">
+          <p>"Hızlı kargo ve sağlam paketleme için teşekkürler."</p>
+          <h4>Ali R. <span class="yorum-stars">★★★★☆</span></h4>
+        </div>
+        <div class="testimonial" style="display: none">
+          <p>"Çocuklarım için de aldım, onlar da severek kullanıyor."</p>
+          <h4>Burcu T. <span class="yorum-stars">★★★★☆</span></h4>
+        </div>
+        <div class="testimonial" style="display: none">
+          <p>
+            "Diş fırçası ambalajı da çevre dostu, detaylara dikkat edilmiş."
+          </p>
+          <h4>Melis Ö. <span class="yorum-stars">★★★★☆</span></h4>
+        </div>
+        <div class="testimonial" style="display: none">
+          <p>"Düzenli kullanınca dişlerim daha sağlıklı görünüyor."</p>
+          <h4>Serkan B. <span class="yorum-stars">★★★★☆</span></h4>
+        </div>
+        <div class="testimonial" style="display: none">
+          <p>"Fiyat performans açısından oldukça başarılı bir ürün."</p>
+          <h4>Elif S. <span class="yorum-stars">★★★★☆</span></h4>
+        </div>
+        <div class="testimonial" style="display: none">
+          <p>
+            "Çevreye duyarlı alışveriş yapmak isteyenlere kesinlikle öneririm."
+          </p>
+          <h4>Canan M. <span class="yorum-stars">★★★★☆</span></h4>
+        </div>
+        <div class="testimonial" style="display: none">
+          <p>"Yumuşaklığı ve tasarımı çok hoş, tekrar almayı düşünüyorum."</p>
+          <h4>Murat G. <span class="yorum-stars">★★★★☆</span></h4>
+        </div>
+        <div class="testimonial" style="display: none">
+          <p>"Ambalajı açar açmaz kalite hissi verdi, çok beğendim."</p>
+          <h4>Ayşegül K. <span class="yorum-stars">★★★★★</span></h4>
+        </div>
+        <div class="testimonial" style="display: none">
+          <p>"Kargo biraz geç geldi ama ürün tam istediğim gibi."</p>
+          <h4>Okan Ç. <span class="yorum-stars">★★★☆☆</span></h4>
+        </div>
+        <div class="testimonial" style="display: none">
+          <p>"Hassas diş etlerim için ideal, artık vazgeçilmezim."</p>
+          <h4>Şule A. <span class="yorum-stars">★★★★☆</span></h4>
+        </div>
+        <div class="testimonial" style="display: none">
+          <p>"Çocuklarla birlikte kullanıyoruz, herkes çok memnun."</p>
+          <h4>Deniz P. <span class="yorum-stars">★★★★☆</span></h4>
+        </div>
+        <div class="testimonial" style="display: none">
+          <p>
+            "Vegan olması benim için çok önemliydi, beklentilerimi karşıladı."
+          </p>
+          <h4>Emel K. <span class="yorum-stars">★★★★☆</span></h4>
+        </div>
+        <div class="testimonial" style="display: none">
+          <p>"Her fırça ayrı paketlenmiş, hijyenik ve güven verici."</p>
+          <h4>Alihan T. <span class="yorum-stars">★★★★☆</span></h4>
+        </div>
+        <div class="testimonial" style="display: none">
+          <p>
+            "Ergonomik tasarım elde çok rahat, uzun süre kullanmak için ideal."
+          </p>
+          <h4>İrem D. <span class="yorum-stars">★★★★☆</span></h4>
+        </div>
+        <div class="testimonial" style="display: none">
+          <p>"Doğal ürün kullanmak isteyen herkese tavsiye ederim."</p>
+          <h4>Levent B. <span class="yorum-stars">★★★☆☆</span></h4>
+        </div>
+        <div class="testimonial" style="display: none">
+          <p>"Hem doğaya hem de diş sağlığıma katkısı olduğu için mutluyum."</p>
+          <h4>Seda N. <span class="yorum-stars">★★☆☆☆</span></h4>
+        </div>
+      </section>
+    </main>
+    <div class="cart-items-container"></div>
+      <!-- Scroll to Top Button with Progress -->
+    <button id="scrollToTopBtn" title="Yukarı Dön">
+      <span class="scroll-progress-bg"></span>
+      <span class="scroll-progress-border">
+        <svg viewBox="0 0 64 64">
+          <circle class="bg" cx="32" cy="32" r="28" stroke-width="4" />
+          <circle id="scrollProgressCircle" cx="32" cy="32" r="28" />
+        </svg>
+      </span>
+      <i class="fa-solid fa-feather-pointed scroll-feather"></i>
+      <span class="scroll-rotate-ring"></span>
+    </button>
+    
+    <script src="../e_ticaret.js"></script>
+  
+  </body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hakkımızda</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome Kütüphanesi -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <h1 class="logo">EcoHome Essentials</h1>
+        <nav class="nav">
+          <ul>
+            <li><a href="index.html">Ana Sayfa</a></li>
+            <li><a href="urunler.html">Ürünlerimiz</a></li>
+            <li><a href="hakkimizda.html">Hakkımızda</a></li>
+            <li><a href="iletisim.html">İletişim</a></li>
+            <li class="cart-container">
+              <!-- Sepet Butonu -->
+              <a href="#cart" id="cart-btn" class="cart-btn">
+                <i class="fas fa-shopping-cart"></i>
+                <span id="cart-count">0</span>
+              </a>
+
+              <!-- Favori Butonu (Menüde) -->
+              <div class="menu-favorite-btn" id="favorite-btn">
+                <i class="fas fa-heart" id="heart-icon"></i>
+                <span id="favorite-count">0</span>
+                <!-- Favori sayısı -->
+              </div>
+
+              <!-- Favoriler Kutusu -->
+              <div
+                id="favorite-container"
+                class="favorite-container"
+              >
+                <h2>Favori Ürünler</h2>
+                <p>Henüz favori ürün yok.</p>
+              </div>
+            </li>
+          </ul>
+          <div class="hamburger" id="hamburger">&#9776;</div>
+        </nav>
+      </div>
+    </header>
+    <!-- Sepet içeriği -->
+    <div class="cart-items-container">
+      <div class="cart-item">
+        <!-- Sepet öğesi burada listelenecek -->
+      </div>
+    </div>
+    <!-- About Section -->
+    <section class="about" id="about">
+      <div class="about-container">
+        <h2>Hakkımızda</h2>
+        <p>
+          EcoHome Essentials olarak, doğaya saygılı ve sürdürülebilir ürünlerle
+          daha bilinçli bir yaşam tarzını destekliyoruz. Günlük hayatta sıkça
+          kullanılan kişisel bakım, mutfak ve temizlik ürünlerini çevre dostu
+          alternatiflerle sunarak, hem sizin sağlığınızı hem de gezegenimizi
+          korumayı hedefliyoruz.
+        </p>
+        <p>
+          Ürün yelpazemizde bambu diş fırçalarından doğal sabunlara, eko dostu
+          su şişelerinden sürdürülebilir temizlik ürünlerine kadar pek çok
+          seçenek bulunuyor.
+        </p>
+        <p>
+          Her biri çevreye zarar vermeyen malzemelerle üretilmiş olup, plastik
+          kullanımını azaltarak doğaya katkı sağlamayı amaçlıyor.
+          <strong>Küçük değişiklikler, büyük farklar yaratır.</strong> Daha
+          yeşil bir gelecek için siz de bu dönüşümün bir parçası olun!🌿
+        </p>
+
+        <div class="about-icons">
+          <div>
+            <i class="fas fa-seedling"></i>
+            <p>Doğal Malzemeler</p>
+          </div>
+          <div>
+            <i class="fas fa-recycle"></i>
+            <p>Sürdürülebilir Üretim</p>
+          </div>
+          <div>
+            <i class="fas fa-leaf"></i>
+            <p>Çevre Dostu</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer">
+      <p>&copy; 2023 EcoHome Essentials. Tüm hakları saklıdır.</p>
+      <p>&copy; Web Tasarım Begüm Narmanlı</p>
+    </footer>
+    <script src="e_ticaret.js"></script>
+  </body>
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Doğal Sabun</title>
+    <link rel="stylesheet" href="../styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body class="urun-detay-body">
+    <header class="header">
+      <div class="container">
+        <h1 class="logo">EcoHome Essentials</h1>
+        <nav class="nav">
+          <ul>
+            <li><a href="../index.html">Ana Sayfa</a></li>
+            <li><a href="../urunler.html">Ürünlerimiz</a></li>
+            <li><a href="../hakkimizda.html">Hakkımızda</a></li>
+            <li><a href="../iletisim.html">İletişim</a></li>
+            <li class="cart-container">
+              <a href="#cart" id="cart-btn" class="cart-btn">
+                <i class="fas fa-shopping-cart"></i>
+                <span id="cart-count">0</span>
+              </a>
+              <div class="menu-favorite-btn" id="favorite-btn">
+                <i class="fas fa-heart" id="heart-icon"></i>
+                <span id="favorite-count">0</span>
+              </div>
+              <div
+                id="favorite-container"
+                class="favorite-container"
+              >
+                <h2>Favori Ürünler</h2>
+                <p>Henüz favori ürün yok.</p>
+              </div>
+            </li>
+          </ul>
+          <div class="hamburger" id="hamburger">&#9776;</div>
+        </nav>
+      </div>
+    </header>
+    <main class="product-detail" style="margin-top: 80px">
+      <div class="bambu-detay-container">
+        <!-- KART BAŞLANGICI -->
+        <a href="../urunler.html" class="btn back-btn">
+          <i class="fas fa-arrow-left"></i> Ürünlere Geri Dön
+        </a>
+        <h2 class="urun-detay-baslik">Doğal Sabun</h2>
+        <div class="card">
+          <div class="cover">
+            <img src="../images/sabun.jpeg" alt="Doğal Sabun Ön Görseli" />
+          </div>
+          <div class="details">
+            <div>
+              <img
+                src="../images/sabun-2.jpg"
+                alt="Doğal Sabun Detay Görseli"
+              />
+              <h3>Doğal Sabun</h3>
+              <h2>₺199.99</h2>
+              <a href="#">Satın Al</a>
+            </div>
+          </div>
+        </div>
+        <!-- KART BİTİŞ -->
+        <div class="bambu-detay-stars">
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+          <span class="customer-reviews">(17 müşteri yorumu)</span>
+        </div>
+
+        <div class="bambu-detay-aciklama">
+          <h3 class="urun-aciklama-baslik">Ürün Açıklaması</h3>
+          <ul>
+            <li>%100 doğal bitkisel yağlardan üretilmiştir, cilt dostudur.</li>
+            <li>Sentetik parfüm, boya ve koruyucu içermez.</li>
+            <li>El yapımı üretim sayesinde her sabun benzersizdir.</li>
+            <li>
+              Hassas ve kuru ciltler dahil tüm cilt tipleri için uygundur.
+            </li>
+            <li>Doğal gliserin içerdiğinden cildi nemlendirir ve yumuşatır.</li>
+            <li>Çevre dostu ve sürdürülebilir ambalaj ile sunulur.</li>
+            <li>Hayvanlar üzerinde test edilmemiştir, vegandır.</li>
+            <li>Yüz, el ve vücut temizliğinde güvenle kullanılabilir.</li>
+          </ul>
+        </div>
+        <button
+          class="btn cart-btn"
+          data-name="Doğal Sabun"
+          data-price="₺199.99"
+          data-image="../images/sabun.jpeg"
+        >
+          <i class="fas fa-shopping-cart"></i> Sepete Ekle
+        </button>
+        <button
+          class="btn favorite-btn"
+          data-name="Doğal Sabun"
+          data-price="₺199.99"
+          data-image="../images/sabun.jpeg"
+        >
+          <i class="fas fa-heart"></i> Favorilere Ekle
+        </button>
+      </div>
+      <section class="testimonials" style="margin-top: 40px">
+        <h2>Müşteri Yorumları</h2>
+        <div class="testimonial">
+          <p>
+            "Cildim çok hassas, bu sabunla hiç sorun yaşamadım. Tavsiye ederim!"
+          </p>
+          <h4>Burcu Y. <span class="yorum-stars">★★★★☆</span></h4>
+        </div>
+        <div class="testimonial">
+          <p>"Kokusu ve dokusu harika, tekrar alacağım."</p>
+          <h4>Ali S. <span class="yorum-stars">★★★★★</span></h4>
+        </div>
+        <div class="testimonial">
+          <p>"Doğal içerikli olması benim için çok önemliydi, çok memnunum."</p>
+          <h4>Gizem K. <span class="yorum-stars">★★★★☆</span></h4>
+        </div>
+        <div class="testimonial" style="display: none">
+          <p>"Cildimi kurutmadan temizliyor, çok memnun kaldım."</p>
+          <h4>Serkan T. <span class="yorum-stars">★★★☆☆</span></h4>
+        </div>
+        <div class="testimonial" style="display: none">
+          <p>"Ambalajı çok özenliydi, hızlı kargo için teşekkürler."</p>
+          <h4>Elif D. <span class="yorum-stars">★★★★★</span></h4>
+        </div>
+        <div class="testimonial" style="display: none">
+          <p>"Kokusu doğal ve ferah, kimyasal kokusu yok."</p>
+          <h4>Mehmet K. <span class="yorum-stars">★★★☆☆</span></h4>
+        </div>
+        <div class="testimonial" style="display: none">
+          <p>"Çocuklarım için de güvenle kullanabiliyorum."</p>
+          <h4>Ayşe N. <span class="yorum-stars">★★★★★</span></h4>
+        </div>
+        <div class="testimonial" style="display: none">
+          <p>"Fiyatı biraz yüksek ama kalitesi çok iyi."</p>
+          <h4>Barış E. <span class="yorum-stars">★★☆☆☆</span></h4>
+        </div>
+        <div class="testimonial" style="display: none">
+          <p>"Ciltte yumuşaklık bırakıyor, tekrar alacağım."</p>
+          <h4>Selin U. <span class="yorum-stars">★★★★★</span></h4>
+        </div>
+        <div class="testimonial" style="display: none">
+          <p>"Doğal içerik arayanlara kesinlikle tavsiye ederim."</p>
+          <h4>Can G. <span class="yorum-stars">★★★★☆</span></h4>
+        </div>
+        <div class="testimonial" style="display: none">
+          <p>
+            "Uzun zamandır kullandığım en iyi doğal sabun. Cildim tahriş
+            olmuyor, temizliyor ama kurutmuyor. Kesinlikle tavsiye ederim."
+          </p>
+          <h4>Melis S. <span class="yorum-stars">★★★☆☆</span></h4>
+        </div>
+        <div class="testimonial" style="display: none">
+          <p>"Cildimde tahrişe neden olmadı, hassas ciltler için uygun."</p>
+          <h4>Emre B. <span class="yorum-stars">★★★☆☆</span></h4>
+        </div>
+        <div class="testimonial" style="display: none">
+          <p>"Köpürmesi güzel, kolay durulanıyor."</p>
+          <h4>Gülşah F. <span class="yorum-stars">★★★★★</span></h4>
+        </div>
+        <div class="testimonial" style="display: none">
+          <p>"Doğal sabun kullanmaya yeni başladım, memnun kaldım."</p>
+          <h4>Deniz M. <span class="yorum-stars">★★★☆☆</span></h4>
+        </div>
+        <div class="testimonial" style="display: none">
+          <p>"Kargo biraz gecikti ama ürün çok iyi."</p>
+          <h4>Burak Z. <span class="yorum-stars">★★☆☆☆</span></h4>
+        </div>
+        <div class="testimonial" style="display: none">
+          <p>"Kokusu kalıcı, banyoda ferah bir hava bırakıyor."</p>
+          <h4>Funda L. <span class="yorum-stars">★★★★★</span></h4>
+        </div>
+      </section>
+    </main>
+    <div class="cart-items-container"></div>
+    <button id="scrollToTopBtn" title="Yukarı Dön">
+      <span class="scroll-progress-bg"></span>
+      <span class="scroll-progress-border">
+        <svg viewBox="0 0 64 64">
+          <circle class="bg" cx="32" cy="32" r="28" stroke-width="4" />
+          <circle id="scrollProgressCircle" cx="32" cy="32" r="28" />
+        </svg>
+      </span>
+      <i class="fa-solid fa-feather-pointed scroll-feather"></i>
+      <span class="scroll-rotate-ring"></span>
+    </button>
+    <script src="../e_ticaret.js"></script>
+  </body>
+</html>

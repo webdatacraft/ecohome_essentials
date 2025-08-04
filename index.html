@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yeşil Ev Ürünleri</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome Kütüphanesi -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <h1 class="logo">EcoHome Essentials</h1>
+        <nav class="nav">
+          <ul>
+            <li><a href="index.html">Ana Sayfa</a></li>
+            <li><a href="urunler.html">Ürünlerimiz</a></li>
+            <li><a href="hakkimizda.html">Hakkımızda</a></li>
+            <li><a href="iletisim.html">İletişim</a></li>
+            <li class="cart-container">
+              <!-- Sepet Butonu -->
+              <a href="#cart" id="cart-btn" class="cart-btn">
+                <i class="fas fa-shopping-cart"></i>
+                <span id="cart-count">0</span>
+              </a>
+
+              <!-- Favori Butonu (Menüde) -->
+              <div class="menu-favorite-btn" id="favorite-btn">
+                <i class="fas fa-heart" id="heart-icon"></i>
+                <span id="favorite-count">0</span>
+                <!-- Favori sayısı -->
+              </div>
+
+              <!-- Favoriler Kutusu -->
+              <div id="favorite-container" class="favorite-container">
+                <button class="close-fav-btn">×</button>
+                <p>Henüz favori ürün yok.</p>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="hamburger" id="hamburger">&#9776;</div>
+    </header>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <h2>Çevre Dostu Ev Ürünleri</h2>
+        <p>Doğal ve sürdürülebilir yaşam için en iyi ürünler.</p>
+        <a href="#products" class="btn special-btn">Ürünlerimizi Keşfedin</a>
+      </div>
+    </section>
+    <!-- section two start -->
+    <div class="text-container">
+      <div class="intro">
+        <h1>Çevre Dostu Ev Ürünleri</h1>
+        <p class="intro-p">
+          Geleceğimizi korumak için küçük değişiklikler büyük farklar yaratır!
+        </p>
+      </div>
+
+      <div class="neden">
+        <h1>Neden Çevre Dostu Ürünleri Tercih Etmeliyiz?</h1>
+        <ul class="neden-list">
+          <li><strong>Daha Sağlıklı Bir Yaşam</strong></li>
+          <li><strong>Atık Miktarını Azaltır</strong></li>
+          <li><strong>Enerji ve Su Tasarrufu Sağlar</strong></li>
+        </ul>
+      </div>
+
+      <div class="katkilar">
+        <h1>Doğaya Katkıları Nelerdir?</h1>
+        <ul class="katkilar-list">
+          <li><strong>Karbon Ayak İzinizi Azaltır</strong></li>
+          <li><strong>Doğal Kaynakları Korur</strong></li>
+          <li>
+            <strong>Biyoçözünür ve Geri Dönüştürülebilir Alternatifler</strong>
+          </li>
+        </ul>
+      </div>
+
+      <div class="son-mesaj">
+        <p>
+          <strong
+            >Gelecek nesillere daha yaşanabilir bir dünya bırakmak için
+            </strong
+            >
+        </p>
+        <p><strong>🌿♻️</strong></p>
+      </div>
+    </div>
+
+    <!-- section two end -->
+
+    <!-- Sepet içeriği -->
+    <div class="cart-items-container">
+      <div class="cart-item">
+        <!-- Sepet öğesi burada listelenecek -->
+      </div>
+    </div>
+    <!-- section three start -->
+    <section class="featured-products" id="products">
+      <h2>Öne Çıkan Ürünlerimiz</h2>
+      <div class="product-cards">
+        <div class="product-card">
+          <img src="./images/sabun.jpeg" alt="Doğal Sabun" />
+          <h3>Doğal Sabun</h3>
+          <p>Kimyasal içermeyen doğal sabun</p>
+        </div>
+
+        <div class="product-card">
+          <img src="./images/pipet.jpg" alt="Doğal Pipet" />
+          <h3>Doğal Pipet</h3>
+          <p>Çevre dostu, tekrar kullanılabilir bambu pipet</p>
+        </div>
+
+        <div class="product-card">
+          <img src="./images/eko_su.jpg" alt="Eko Dostu Su Şişesi" />
+          <h3>Eko Dostu Su Şişesi</h3>
+          <p>
+            Çevre dostu, BPA içermeyen tekrar kullanılabilir plastik su şişesi
+          </p>
+        </div>
+      </div>
+      <a href="urunler.html" class="btn" id="btn-tum-urunler"
+        >Tüm Ürünlere Göz At</a
+      >
+    </section>
+
+    <!-- section three end -->
+
+    <section class="testimonials">
+      <h2>Müşteri Yorumları</h2>
+      <div class="testimonial">
+        <p>
+          "EcoHome ürünleri sayesinde doğaya zarar vermeden günlük ihtiyaçlarımı
+          karşılıyorum. Çok memnunum!"
+        </p>
+        <h4>- Ayşe K.</h4>
+      </div>
+      <div class="testimonial">
+        <p>
+          "Kaliteli ve sürdürülebilir ürünler sunuyorlar. Kesinlikle tavsiye
+          ederim."
+        </p>
+        <h4>- Mehmet T.</h4>
+      </div>
+      <div class="testimonial">
+        <p>
+          "Ürünlerin kalitesi gerçekten çok iyi ve teslimat da tam zamanında
+          gerçekleşti. Alışveriş süreci çok kolaydı, site kullanımı çok pratik.
+          Favori ürünlerimi kaydedebilmek ve sepeti yönetmek harika bir özellik.
+          Kesinlikle tekrar alışveriş yapacağım, herkese tavsiye ederim!"
+        </p>
+        <h4>- Aslı Z.</h4>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>
+        <span class="footer-item main-title"
+          >&copy; 2023 EcoHome Essentials.</span
+        >
+        <span class="footer-item sub-items">Tüm hakları saklıdır.</span>
+        <span class="footer-item sub-items">Web Tasarım: Begüm Narmanlı</span>
+      </p>
+    </footer>
+
+    <button id="scrollToTopBtn" title="Yukarı Dön">
+      <span class="scroll-progress-bg"></span>
+      <span class="scroll-progress-border">
+        <svg viewBox="0 0 64 64">
+          <circle class="bg" cx="32" cy="32" r="28" stroke-width="4" />
+          <circle id="scrollProgressCircle" cx="32" cy="32" r="28" />
+        </svg>
+      </span>
+      <i class="fa-solid fa-feather-pointed scroll-feather"></i>
+      <span class="scroll-rotate-ring"></span>
+    </button>
+    <script src="e_ticaret.js"></script>
+  </body>
+</html>

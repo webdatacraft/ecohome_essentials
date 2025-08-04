@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>İletişim</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome Kütüphanesi -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <h1 class="logo">EcoHome Essentials</h1>
+        <nav class="nav">
+          <ul>
+            <li><a href="index.html">Ana Sayfa</a></li>
+            <li><a href="urunler.html">Ürünlerimiz</a></li>
+            <li><a href="hakkimizda.html">Hakkımızda</a></li>
+            <li><a href="iletisim.html">İletişim</a></li>
+            <li class="cart-container">
+              <!-- Sepet Butonu -->
+              <a href="#cart" id="cart-btn" class="cart-btn">
+                <i class="fas fa-shopping-cart"></i>
+                <span id="cart-count">0</span>
+              </a>
+
+              <!-- Favori Butonu (Menüde) -->
+              <div class="menu-favorite-btn" id="favorite-btn">
+                <i class="fas fa-heart" id="heart-icon"></i>
+                <span id="favorite-count">0</span>
+                <!-- Favori sayısı -->
+              </div>
+
+              <!-- Favoriler Kutusu -->
+              <div id="favorite-container" class="favorite-container">
+                <button class="close-fav-btn">×</button>
+                <p>Henüz favori ürün yok.</p>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="hamburger" id="hamburger">&#9776;</div>
+
+    </header>
+    <!-- Sepet içeriği -->
+    <div class="cart-items-container">
+      <div class="cart-item">
+        <!-- Sepet öğesi burada listelenecek -->
+      </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+      <h2>İletişim</h2>
+      <form class="contact-form">
+        <input type="text" placeholder="Adınız" required />
+        <input type="email" placeholder="E-posta" required />
+        <textarea placeholder="Mesajınız" rows="5" required></textarea>
+        <button type="submit" class="btn">Gönder</button>
+      </form>
+      <!-- İletişim bilgileri -->
+      <div class="contact-info">
+        <h3>Bizimle İletişime Geçin</h3>
+        <p>E-posta: <a href="mailto:info@ecohome.com">info@ecohome.com</a></p>
+        <p>Telefon: <a href="tel:+905012345678">+90 501 234 56 78</a></p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>&copy; 2023 EcoHome Essentials. Tüm hakları saklıdır.</p>
+      <p>Web Tasarım Begüm Narmanlı</p>
+    </footer>
+    <script src="e_ticaret.js"></script>
+  </body>
+</html>

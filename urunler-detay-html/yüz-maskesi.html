@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Doğal Yüz Maskesi</title>
+    <link rel="stylesheet" href="../styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body class="urun-detay-body">
+    <header class="header">
+      <div class="container">
+        <h1 class="logo">EcoHome Essentials</h1>
+        <nav class="nav">
+          <ul>
+            <li><a href="../index.html">Ana Sayfa</a></li>
+            <li><a href="../urunler.html">Ürünlerimiz</a></li>
+            <li><a href="../hakkimizda.html">Hakkımızda</a></li>
+            <li><a href="../iletisim.html">İletişim</a></li>
+            <li class="cart-container">
+              <a href="#cart" id="cart-btn" class="cart-btn">
+                <i class="fas fa-shopping-cart"></i>
+                <span id="cart-count">0</span>
+              </a>
+              <div class="menu-favorite-btn" id="favorite-btn">
+                <i class="fas fa-heart" id="heart-icon"></i>
+                <span id="favorite-count">0</span>
+              </div>
+              <div
+                id="favorite-container"
+                class="favorite-container"
+              >
+                <h2>Favori Ürünler</h2>
+                <p>Henüz favori ürün yok.</p>
+              </div>
+            </li>
+          </ul>
+          <div class="hamburger" id="hamburger">&#9776;</div>
+        </nav>
+      </div>
+    </header>
+    <main class="product-detail" style="margin-top: 80px">
+      <div class="bambu-detay-container">
+        <a href="../urunler.html" class="btn back-btn">
+          <i class="fas fa-arrow-left"></i> Ürünlere Geri Dön
+        </a>
+        <h2 class="urun-detay-baslik">Doğal Yüz Maskesi</h2>
+        <!-- KART BAŞLANGICI -->
+        <div class="card">
+          <div class="cover">
+            <img src="../images/maske.jpg" alt="Doğal Yüz Maskesi Ön Görseli" />
+          </div>
+          <div class="details">
+            <div>
+              <img
+                src="../images/maske-2.jpg"
+                alt="Doğal Yüz Maskesi Detay Görseli"
+              />
+              <h3>Doğal Yüz Maskesi</h3>
+              <h2>₺499.90</h2>
+              <a href="#">Satın Al</a>
+            </div>
+          </div>
+        </div>
+        <!-- KART BİTİŞ -->
+        <div class="bambu-detay-stars">
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+          <span class="customer-reviews">(8 müşteri yorumu)</span>
+        </div>
+        <div class="bambu-detay-aciklama">
+          <h3 class="urun-aciklama-baslik">Ürün Açıklaması</h3>
+          <ul>
+            <li>
+              %100 doğal özlerle formüle edilmiş, cildinizi derinlemesine
+              nemlendirir ve besler.
+            </li>
+            <li>
+              Cildin doğal parlaklığını ortaya çıkaran, zengin vitamin ve
+              mineraller içeren bakım maskesi.
+            </li>
+            <li>
+              Hassas ciltler için ideal, tahrişi azaltan ve nem dengesini
+              sağlayan formül.
+            </li>
+            <li>
+              Cildi yumuşatan ve canlandıran, düzenli kullanımda cilt dokusunu
+              iyileştiren doğal maske.
+            </li>
+            <li>
+              Kimyasal içermeyen, bitkisel özlerle cilt bariyerini güçlendiren
+              nem bombası.
+            </li>
+            <li>
+              Gözenekleri sıkılaştırmaya yardımcı, cildi tazeleyen ve yenileyen
+              bakım ürünü.
+            </li>
+            <li>
+              Yoğun nem sağlayarak cildin elastikiyetini artıran, doğal
+              kaynaklardan elde edilen içeriklerle hazırlanmıştır.
+            </li>
+            <li>
+              Ciltteki kuruluğu giderir, pürüzsüz ve sağlıklı bir görünüm
+              kazandırır.
+            </li>
+            <li>
+              Antioksidanlar açısından zengin, cildi dış etkenlere karşı koruyan
+              ve besleyen maske.
+            </li>
+            <li>
+              Derinlemesine arındırıcı ve nemlendirici etkisiyle cildinizin
+              ışıltısını geri kazandırır.
+            </li>
+          </ul>
+        </div>
+        <button
+          class="btn cart-btn"
+          data-name="Doğal Yüz Maskesi"
+          data-price="₺499.90"
+          data-image="../images/maske.jpg"
+        >
+          <i class="fas fa-shopping-cart"></i> Sepete Ekle
+        </button>
+        <button
+          class="btn favorite-btn"
+          data-name="Doğal Yüz Maskesi"
+          data-price="₺499.90"
+          data-image="../images/maske.jpg"
+        >
+          <i class="fas fa-heart"></i> Favorilere Ekle
+        </button>
+      </div>
+      <section class="testimonials" style="margin-top: 40px">
+        <h2>Müşteri Yorumları</h2>
+        <div class="testimonial">
+          <p>
+            "Cildim çok daha yumuşak ve parlak oldu, kesinlikle tavsiye ederim."
+          </p>
+          <h4>Melis A. <span class="yorum-stars">★★★★★</span></h4>
+        </div>
+        <div class="testimonial">
+          <p>
+            "Doğal olması benim için çok önemliydi, hassas cildime çok iyi
+            geldi."
+          </p>
+          <h4>Deniz K. <span class="yorum-stars">★★★★☆</span></h4>
+        </div>
+        <div class="testimonial">
+          <p>"Kokusu ve dokusu harika, tekrar alacağım."</p>
+          <h4>Ayça S. <span class="yorum-stars">★★★★☆</span></h4>
+        </div>
+        <div
+          class="testimonial hidden-testimonial"
+          data-stars="5"
+          style="display: none"
+        >
+          <p>
+            "Cildimdeki kuruluk tamamen geçti, ilk kullanımdan itibaren farkı
+            hissettim. Düzenli kullandıkça cildim daha sağlıklı görünüyor."
+          </p>
+          <h4>Burcu Y. <span class="yorum-stars">★★★★★</span></h4>
+        </div>
+        <div
+          class="testimonial hidden-testimonial"
+          data-stars="4"
+          style="display: none"
+        >
+          <p>
+            "Kokusu çok hoşuma gitti, cildimi yormadan güzelce nemlendirdi.
+            Biraz daha büyük boy olsa harika olurdu."
+          </p>
+          <h4>Serap T. <span class="yorum-stars">★★★★☆</span></h4>
+        </div>
+        <div
+          class="testimonial hidden-testimonial"
+          data-stars="3"
+          style="display: none"
+        >
+          <p>
+            "Ürün güzel ama etkisi beklediğim kadar uzun sürmedi. Yine de doğal
+            içerik olması artı."
+          </p>
+          <h4>Gizem E. <span class="yorum-stars">★★★☆☆</span></h4>
+        </div>
+        <div
+          class="testimonial hidden-testimonial"
+          data-stars="2"
+          style="display: none"
+        >
+          <p>
+            "Cildimde hafif bir kızarıklık yaptı, hassas ciltler dikkatli
+            kullanmalı. Nemlendirmesi fena değil."
+          </p>
+          <h4>Elif D. <span class="yorum-stars">★★☆☆☆</span></h4>
+        </div>
+        <div
+          class="testimonial hidden-testimonial"
+          data-stars="4"
+          style="display: none"
+        >
+          <p>
+            "Yüzümde ferahlatıcı bir his bıraktı, özellikle yaz aylarında çok
+            sevdim. Tavsiye ederim."
+          </p>
+          <h4>Selin U. <span class="yorum-stars">★★★★☆</span></h4>
+        </div>
+      </section>
+    </main>
+    <!-- Sepet Kutusu (Cart Items Container) -->
+    <div class="cart-items-container"></div>
+    <!-- Scroll to Top Button with Progress -->
+    <button id="scrollToTopBtn" title="Yukarı Dön">
+      <span class="scroll-progress-bg"></span>
+      <span class="scroll-progress-border">
+        <svg viewBox="0 0 64 64">
+          <circle class="bg" cx="32" cy="32" r="28" stroke-width="4" />
+          <circle id="scrollProgressCircle" cx="32" cy="32" r="28" />
+        </svg>
+      </span>
+      <i class="fa-solid fa-feather-pointed scroll-feather"></i>
+      <span class="scroll-rotate-ring"></span>
+    </button>
+    <script src="../e_ticaret.js"></script>
+  </body>
+</html>

@@ -196,7 +196,6 @@ ul {
   margin-left: 5px;
   margin-right: 0;
   width: fit-content;
-  text-align: left;
   display: block;
 }
 /* section two- text-container start */
@@ -1264,7 +1263,7 @@ h3 {
 
 .card {
   position: relative;
-  width: 200px;
+  width: 175px;
   height: 350px;
   background: #fff;
   transform-style: preserve-3d;

@@ -312,17 +312,25 @@ function updateFavoriteContainer() {
       favoriteContainer.innerHTML = favorites
         .map((item, idx) => {
           let imagePath = item.image;
+          console.log("Orijinal resim yolu:", imagePath);
 
-          // Resim yolunu düzelt
+          // Resim yolunu düzelt - canlı ortam için daha esnek yaklaşım
           if (window.location.pathname.includes("urunler-detay-html")) {
-            if (!imagePath.startsWith("../")) {
+            // Detay sayfalarından erişim
+            if (!imagePath.includes("../")) {
               imagePath = "../" + imagePath;
             }
+          } else {
+            // Ana sayfa ve ürünler sayfasından erişim
+            if (imagePath.includes("../")) {
+              imagePath = imagePath.replace("../", "");
+            }
+            if (!imagePath.startsWith("/") && !imagePath.startsWith("http")) {
+              imagePath = "/" + imagePath;
+            }
           }
-
-          if (!imagePath.startsWith("/")) {
-            imagePath = "/" + imagePath;
-          }
+          
+          console.log("Düzeltilmiş resim yolu:", imagePath);
 
           // Fiyatı sayısal değere çevir ve toplama ekle
           const price = parseFloat(item.price.replace("₺", "").trim());
@@ -331,7 +339,7 @@ function updateFavoriteContainer() {
           return `<div class="cart-item">
           <img src="${imagePath}" alt="${item.name}" 
               style="width:60px; height:60px; object-fit:cover; border-radius:8px; margin-right:10px;"
-              onerror="this.onerror=null; this.src='/images/placeholder.jpg';">
+              onerror="this.onerror=null; this.src='images/placeholder.jpg';">
           <p class="cart-item-price"><span class="cart-item-name">${item.name}</span><br><span class="cart-item-amount">${item.price}</span></p>
           <button class="favorite-remove-btn remove-btn" data-index="${idx}">Kaldır</button>
         </div>`;

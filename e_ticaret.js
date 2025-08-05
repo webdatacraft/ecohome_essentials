@@ -127,7 +127,7 @@ function loadCart() {
     cartItem.innerHTML = `
       <img src="${imagePath}" alt="${item.name}" style="width:60px; height:60px; object-fit:cover; border-radius:8px;">
       <p class="cart-item-price"><span class="cart-item-name">${item.name}</span><br><span class="cart-item-amount">${item.price}</span></p>
-      <div style="display:flex; align-items:center; gap:5px;">
+      <div style="display:flex; align-items:center;">
         <p>Adet: ${item.quantity}</p>
         <button class="increase-btn">+</button>
         <button class="decrease-btn">-</button>

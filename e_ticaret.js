@@ -119,8 +119,21 @@ function loadCart() {
 
   cart.forEach((item) => {
     let imagePath = item.image;
-    if (window.location.pathname.includes("urunler-detay-html")) {
-      imagePath = "../" + imagePath;
+    
+    // Resim yolunu düzelt - GitHub Pages için
+    if (window.location.hostname.includes("github.io")) {
+      // GitHub Pages canlı ortam
+      if (imagePath.includes("../")) {
+        imagePath = imagePath.replace("../", "");
+      }
+      if (!imagePath.startsWith("/") && !imagePath.startsWith("http")) {
+        imagePath = "/ecohome_essentials/" + imagePath;
+      }
+    } else {
+      // Local geliştirme ortamı
+      if (window.location.pathname.includes("urunler-detay-html")) {
+        imagePath = "../" + imagePath;
+      }
     }
     const cartItem = document.createElement("div");
     cartItem.classList.add("cart-item");

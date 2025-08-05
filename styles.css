@@ -435,7 +435,6 @@ button:hover {
 
 .special-btn:hover {
   background: linear-gradient(45deg, #66bb6a, #ffffff);
-  color: #ffffff; /* Hover durumunda yazı rengini beyaz yapalım */
 }
 #cart-count {
   font-weight: bold;

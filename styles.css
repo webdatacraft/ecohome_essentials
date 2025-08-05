@@ -111,13 +111,15 @@ ul {
   flex-direction: column;
   width: 100%;
   margin-top: 20px;
-  background-color: #333; /* Başlangıç rengi */
+  background-color: #333;
   position: absolute;
-  top: 40px; /* Menüyü başlığın altına yerleştir */
+  top: 40px;
   left: 0;
   z-index: 10;
-  height: 55vh;
+  max-height: 90vh;
+  overflow-y: auto;
 }
+
 
 /* Menü açıldığında görünür */
 .nav.open ul {
@@ -143,7 +145,7 @@ ul {
   position: absolute;
   left: 0;
   text-decoration: none;
-  transition: width 0.4s ease-in-out; 
+  transition: width 0.4s ease-in-out;
 }
 
 .hero {
@@ -1483,6 +1485,8 @@ h3 {
     margin-top: 0;
     width: 100%;
     padding: 0;
+    height: 60px;
+    align-items: center;
   }
 
   .nav.open ul {
@@ -1490,11 +1494,6 @@ h3 {
     background-color: transparent;
   }
   .nav {
-    height: 60px;
-    align-items: center;
-  }
-
-  .nav ul {
     height: 60px;
     align-items: center;
   }
@@ -1642,25 +1641,25 @@ h3 {
   .hamburger {
     display: none;
   }
-.nav a {
-  font-size: 18px;
-  display: inline-block;
-  position: relative;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  text-decoration: none;
-}
+  .nav a {
+    font-size: 18px;
+    display: inline-block;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+  }
 
-.nav a:hover {
-  transform: translateY(-5px);
-}
-#favorite-btn {
-  display: inline-block; 
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+  .nav a:hover {
+    transform: translateY(-5px);
+  }
+  #favorite-btn {
+    display: inline-block;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
 
-#favorite-btn:hover {
-  transform: translateY(-5px);
-}
+  #favorite-btn:hover {
+    transform: translateY(-5px);
+  }
 
   .cart-container a i {
     font-size: 16px;
@@ -1678,7 +1677,7 @@ h3 {
     min-width: 14px;
     height: 14px;
   }
-  .menu-favorite-btn{
+  .menu-favorite-btn {
     top: 3px;
   }
   .nav ul {
@@ -1689,6 +1688,8 @@ h3 {
     margin-top: 0;
     width: 100%;
     padding: 0;
+    height: 60px;
+    align-items: center;
   }
 
   .nav.open ul {
@@ -1696,11 +1697,6 @@ h3 {
     background-color: transparent;
   }
   .nav {
-    height: 60px;
-    align-items: center;
-  }
-
-  .nav ul {
     height: 60px;
     align-items: center;
   }
@@ -1868,16 +1864,14 @@ h3 {
   .card {
     width: 250px;
     height: 450px;
-}
-.card .cover img {
+  }
+  .card .cover img {
     height: 70%;
-}
-.card .details img {
+  }
+  .card .details img {
     width: 200px;
-}
-.bambu-detay-aciklama{
-  font-size: 16px;
-}
-
-
+  }
+  .bambu-detay-aciklama {
+    font-size: 16px;
+  }
 }

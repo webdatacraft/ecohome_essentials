@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ahşap Sabunluk</title>
+    <title>Ahşap Sabunluk ve Banyo Ürünleri</title>
     <link rel="stylesheet" href="../styles.css" />
     <link
       rel="stylesheet"
@@ -29,10 +29,7 @@
                 <i class="fas fa-heart" id="heart-icon"></i>
                 <span id="favorite-count">0</span>
               </div>
-              <div
-                id="favorite-container"
-                class="favorite-container"
-              >
+              <div id="favorite-container" class="favorite-container">
                 <h2>Favori Ürünler</h2>
                 <p>Henüz favori ürün yok.</p>
               </div>
@@ -47,7 +44,7 @@
         <a href="../urunler.html" class="btn back-btn">
           <i class="fas fa-arrow-left"></i> Ürünlere Geri Dön
         </a>
-        <h2 class="urun-detay-baslik">Ahşap Sabunluk</h2>
+        <h2 class="urun-detay-baslik">Ahşap Sabunluk ve Banyo Ürünleri</h2>
         <!-- KART BAŞLANGICI -->
         <div class="card">
           <div class="cover">
@@ -59,7 +56,7 @@
                 src="../images/sabunluk-2.jpg"
                 alt="Sabunluk Detay Görseli"
               />
-              <h3>Ahşap Sabunluk</h3>
+              <h3>Ahşap Sabunluk ve Banyo Ürünleri</h3>
               <h2>₺409,90</h2>
               <a href="#">Satın Al</a>
             </div>
@@ -77,8 +74,10 @@
           <span class="customer-reviews">(18 müşteri yorumu)</span>
         </div>
         <div class="bambu-detay-aciklama">
-          <h3 class="urun-aciklama-baslik">Ürün Açıklaması</h3>
-          <ul>
+          <h3 class="urun-aciklama-baslik" id="aciklamaBaslik">
+            Ürün Açıklaması
+          </h3>
+          <ul id="aciklamaIcerik" style="display: none">
             <li>
               %100 doğal ahşaptan el işçiliğiyle üretilmiştir, her biri
               benzersizdir.
@@ -111,7 +110,7 @@
         </div>
         <button
           class="btn cart-btn"
-          data-name="Ahşap Sabunluk"
+          data-name="Ahşap Sabunluk ve Banyo Ürünleri"
           data-price="₺409,90"
           data-image="../images/sabunluk.jpg"
         >
@@ -119,7 +118,7 @@
         </button>
         <button
           class="btn favorite-btn"
-          data-name="Ahşap Sabunluk"
+          data-name="Ahşap Sabunluk ve Banyo Ürünleri"
           data-price="₺409,90"
           data-image="../images/sabunluk.jpg"
         >
@@ -318,7 +317,7 @@
       <i class="fa-solid fa-feather-pointed scroll-feather"></i>
       <span class="scroll-rotate-ring"></span>
     </button>
-  
+
     <script src="../e_ticaret.js"></script>
   </body>
 </html>

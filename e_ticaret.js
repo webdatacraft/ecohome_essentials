@@ -584,3 +584,15 @@ if (window.location.pathname.includes("urunler.html")) {
     }
   });
 }
+document.addEventListener("DOMContentLoaded", function() {
+  const baslik = document.getElementById("aciklamaBaslik");
+  const icerik = document.getElementById("aciklamaIcerik");
+
+  baslik.addEventListener("click", function() {
+    if (icerik.style.display === "none" || icerik.style.display === "") {
+      icerik.style.display = "block";
+    } else {
+      icerik.style.display = "none";
+    }
+  });
+});

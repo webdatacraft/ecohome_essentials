@@ -597,3 +597,65 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
+document.querySelectorAll('.card').forEach(card => {
+  const cover = card.querySelector('.cover');
+  if (!cover) return;
+
+  const imgs = cover.querySelectorAll('img');
+  if (imgs.length < 2) return;
+
+  const img1 = imgs[0];
+  const img2 = imgs[1];
+  let timeoutId;
+  let kitapAcik = false;
+
+  img2.style.display = 'none';
+  img1.style.display = 'block';
+
+  // Desktop hover
+  card.addEventListener('mouseenter', () => {
+    if (kitapAcik) return;
+
+    // Hover başladı, 1 saniye sonra değiştir
+    timeoutId = setTimeout(() => {
+      img1.style.display = 'none';
+      img2.style.display = 'block';
+      kitapAcik = true;
+    }, 1000);
+  });
+
+  card.addEventListener('mouseleave', () => {
+    if (kitapAcik) {
+      // Kapanma animasyon süresi varsayalım 500ms
+      setTimeout(() => {
+        img1.style.display = 'block';
+        img2.style.display = 'none';
+        kitapAcik = false;
+      }, 500);
+    }
+    clearTimeout(timeoutId);
+  });
+
+  // Mobil/tablet tıklama için
+  cover.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    if (!kitapAcik) {
+      // Kitap açılma animasyonu süresi 500ms varsayıyoruz
+      setTimeout(() => {
+        img1.style.display = 'none';
+        img2.style.display = 'block';
+        kitapAcik = true;
+      }, 500);
+    } else {
+      // Kitap kapanma animasyonu süresi 500ms
+      setTimeout(() => {
+        img1.style.display = 'block';
+        img2.style.display = 'none';
+        kitapAcik = false;
+      }, 500);
+    }
+  });
+});
+
+

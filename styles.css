@@ -1522,6 +1522,18 @@ h3 {
   opacity: 0;
   pointer-events: none;
 }
+.cover img:nth-child(2) {
+  display: none;
+}
+
+.card:hover .cover img:nth-child(1) {
+  display: none;
+}
+
+.card:hover .cover img:nth-child(2) {
+  display: block;
+}
+
 /* Tablet ve üzeri hamburger gizli, nav görünsün */
 @media (min-width: 768px) and (max-width: 1024px) {
   .hamburger {
@@ -1916,7 +1928,8 @@ h3 {
     height: 450px;
   }
   .card .cover img {
-    height: 70%;
+    height: 50%; 
+    width: auto; 
   }
   .card .details img {
     width: 200px;

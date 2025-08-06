@@ -1501,6 +1501,27 @@ h3 {
   opacity: 1;
   transform: scale(1);
 }
+.urun-detay-pointer {
+  position: absolute;
+  bottom: 16px;
+  right: 8px;
+  color: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  padding: 8px;
+  background-color: #70cc75;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  font-size: 24px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.urun-detay-pointer:hover {
+  transform: scale(1.2);
+}
+.cover:hover .urun-detay-pointer {
+  opacity: 0;
+  pointer-events: none;
+}
 /* Tablet ve üzeri hamburger gizli, nav görünsün */
 @media (min-width: 768px) and (max-width: 1024px) {
   .hamburger {
@@ -1919,5 +1940,8 @@ h3 {
 
   .aciklama-icerik.aciklama-acik {
     max-height: 500px;
+  }
+  div.card > .cover > .urun-detay-pointer {
+    display: none;
   }
 }

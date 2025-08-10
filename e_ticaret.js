@@ -119,7 +119,7 @@ function loadCart() {
 
   cart.forEach((item) => {
     let imagePath = item.image;
-    
+
     // Resim yolunu düzelt - GitHub Pages için
     if (window.location.hostname.includes("github.io")) {
       // GitHub Pages canlı ortam
@@ -225,10 +225,28 @@ if (cartBtn && cartItem) {
     cartItem.classList.toggle("active"); // Sepeti aç / kapa
   });
 
+  // Sepet kapanma butonuna tıklanınca yumuşak kapanma
+  const closeCartBtn = document.querySelector(".close-cart-btn");
+  if (closeCartBtn) {
+    closeCartBtn.addEventListener("click", function () {
+      // Önce kapanma animasyonu sınıfını ekle
+      cartItem.classList.add("closing");
+
+      // Animasyon tamamlandıktan sonra active sınıfını kaldır
+      setTimeout(() => {
+        cartItem.classList.remove("active", "closing");
+      }, 1000); // CSS'deki transition süresi ile eşleşmeli
+    });
+  }
+
   // Sayfa içindeki diğer yerlere tıklanınca sepetin kapanması
   document.addEventListener("click", function (event) {
     if (!cartItem.contains(event.target) && !cartBtn.contains(event.target)) {
-      cartItem.classList.remove("active"); // Sepeti kapat
+      // Yumuşak kapanma için
+      cartItem.classList.add("closing");
+      setTimeout(() => {
+        cartItem.classList.remove("active", "closing");
+      }, 1000);
     }
   });
 }
@@ -351,7 +369,7 @@ function updateFavoriteContainer() {
               }
             }
           }
-          
+
           console.log("Düzeltilmiş resim yolu:", imagePath);
 
           // Fiyatı sayısal değere çevir ve toplama ekle
@@ -413,22 +431,59 @@ if (favoriteBtn && favoriteContainerDiv) {
     }
     favoriteContainerDiv.classList.toggle("active");
   });
+
+  // Favoriler kapanma butonuna tıklanınca yumuşak kapanma
+  const closeFavBtn = document.querySelector(".close-fav-btn");
+  if (closeFavBtn) {
+    closeFavBtn.addEventListener("click", function () {
+      // Önce kapanma animasyonu sınıfını ekle
+      favoriteContainerDiv.classList.add("closing");
+
+      // Animasyon tamamlandıktan sonra active sınıfını kaldır
+      setTimeout(() => {
+        favoriteContainerDiv.classList.remove("active", "closing");
+      }, 800); // CSS'deki transition süresi ile eşleşmeli
+    });
+  }
+
   // Sayfa içinde başka bir yere tıklanınca favori kutusunu kapat
   document.addEventListener("click", function (event) {
     if (
       !favoriteContainerDiv.contains(event.target) &&
       !favoriteBtn.contains(event.target)
     ) {
-      favoriteContainerDiv.classList.remove("active");
+      // Yumuşak kapanma için
+      favoriteContainerDiv.classList.add("closing");
+      setTimeout(() => {
+        favoriteContainerDiv.classList.remove("active", "closing");
+      }, 800);
     }
   });
+
   const cartBtn = document.getElementById("cart-btn");
   const favoriteContainerDiv = document.getElementById("favorite-container");
 
   if (cartBtn && favoriteContainerDiv) {
     cartBtn.addEventListener("click", function () {
       if (favoriteContainerDiv.classList.contains("active")) {
-        favoriteContainerDiv.classList.remove("active");
+        // Yumuşak kapanma için
+        favoriteContainerDiv.classList.add("closing");
+        setTimeout(() => {
+          favoriteContainerDiv.classList.remove("active", "closing");
+        }, 800);
+      }
+    });
+  }
+
+  // Favoriler açıldığında sepeti kapat
+  if (favoriteBtn && cartItem) {
+    favoriteBtn.addEventListener("click", function () {
+      if (cartItem.classList.contains("active")) {
+        // Sepeti yumuşak kapanma ile kapat
+        cartItem.classList.add("closing");
+        setTimeout(() => {
+          cartItem.classList.remove("active", "closing");
+        }, 1000);
       }
     });
   }
@@ -490,20 +545,31 @@ function showAllComments() {
 document.addEventListener("DOMContentLoaded", function () {
   const hamburger = document.getElementById("hamburger");
   const nav = document.querySelector(".nav");
+  const cartItem = document.querySelector(".cart-items-container");
+  const favoriteContainerDiv = document.getElementById("favorite-container");
 
   if (hamburger && nav) {
     // Hamburger tıklanırsa menü aç/kapa
     hamburger.addEventListener("click", function (e) {
-      e.stopPropagation(); // Bu tıklamanın dışarı yayılmasını engelle
-      nav.classList.toggle("open");
-    });
+      e.stopPropagation(); // Olayın yayılmasını engelle // Sepet veya favoriler açıksa onları kapat
 
-    // Menü içeriğine tıklanırsa kapanmasın
+      if (cartItem && cartItem.classList.contains("active")) {
+        cartItem.classList.remove("active");
+      }
+      if (
+        favoriteContainerDiv &&
+        favoriteContainerDiv.classList.contains("active")
+      ) {
+        favoriteContainerDiv.classList.remove("active");
+      } // Menüyü açar. Eğer açıksa tekrar açmaya çalışmaz, yani her zaman açık kalır.
+
+      nav.classList.add("open");
+    }); // Menü içeriğine tıklanırsa kapanmasın
+
     nav.addEventListener("click", function (e) {
       e.stopPropagation();
-    });
+    }); // Sayfadaki herhangi bir yere tıklanınca menü kapansın
 
-    // Sayfadaki herhangi bir yere tıklanınca menü kapansın
     document.addEventListener("click", function () {
       nav.classList.remove("open");
     });
@@ -584,11 +650,11 @@ if (window.location.pathname.includes("urunler.html")) {
     }
   });
 }
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   const baslik = document.getElementById("aciklamaBaslik");
   const icerik = document.getElementById("aciklamaIcerik");
 
-  baslik.addEventListener("click", function() {
+  baslik.addEventListener("click", function () {
     if (icerik.style.display === "none" || icerik.style.display === "") {
       icerik.style.display = "block";
     } else {
@@ -597,11 +663,11 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
-document.querySelectorAll('.card').forEach(card => {
-  const cover = card.querySelector('.cover');
+document.querySelectorAll(".card").forEach((card) => {
+  const cover = card.querySelector(".cover");
   if (!cover) return;
 
-  const imgs = cover.querySelectorAll('img');
+  const imgs = cover.querySelectorAll("img");
   if (imgs.length < 2) return;
 
   const img1 = imgs[0];
@@ -609,27 +675,27 @@ document.querySelectorAll('.card').forEach(card => {
   let timeoutId;
   let kitapAcik = false;
 
-  img2.style.display = 'none';
-  img1.style.display = 'block';
+  img2.style.display = "none";
+  img1.style.display = "block";
 
   // Desktop hover
-  card.addEventListener('mouseenter', () => {
+  card.addEventListener("mouseenter", () => {
     if (kitapAcik) return;
 
     // Hover başladı, 1 saniye sonra değiştir
     timeoutId = setTimeout(() => {
-      img1.style.display = 'none';
-      img2.style.display = 'block';
+      img1.style.display = "none";
+      img2.style.display = "block";
       kitapAcik = true;
     }, 1000);
   });
 
-  card.addEventListener('mouseleave', () => {
+  card.addEventListener("mouseleave", () => {
     if (kitapAcik) {
       // Kapanma animasyon süresi varsayalım 500ms
       setTimeout(() => {
-        img1.style.display = 'block';
-        img2.style.display = 'none';
+        img1.style.display = "block";
+        img2.style.display = "none";
         kitapAcik = false;
       }, 500);
     }
@@ -637,25 +703,23 @@ document.querySelectorAll('.card').forEach(card => {
   });
 
   // Mobil/tablet tıklama için
-  cover.addEventListener('click', (e) => {
+  cover.addEventListener("click", (e) => {
     e.preventDefault();
 
     if (!kitapAcik) {
       // Kitap açılma animasyonu süresi 500ms varsayıyoruz
       setTimeout(() => {
-        img1.style.display = 'none';
-        img2.style.display = 'block';
+        img1.style.display = "none";
+        img2.style.display = "block";
         kitapAcik = true;
       }, 500);
     } else {
       // Kitap kapanma animasyonu süresi 500ms
       setTimeout(() => {
-        img1.style.display = 'block';
-        img2.style.display = 'none';
+        img1.style.display = "block";
+        img2.style.display = "none";
         kitapAcik = false;
       }, 500);
     }
   });
 });
-
-

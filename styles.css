@@ -457,13 +457,28 @@ button:hover {
   overflow-y: auto;
   z-index: 2000;
   transform: translateX(100%);
-  transition: transform 1.2s cubic-bezier(0.77, 0, 0.18, 1), opacity 0.5s;
-  opacity: 1;
+  transition: transform 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 1s ease-in-out, visibility 1s ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  will-change: transform, opacity, visibility;
 }
 
 .cart-items-container.active {
   transform: translateX(0);
   opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transition: transform 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 1s ease-in-out, visibility 1s ease-in-out;
+}
+
+/* Sepet kapanma animasyonu */
+.cart-items-container.closing {
+  transform: translateX(100%);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: transform 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 1s ease-in-out, visibility 1s ease-in-out;
 }
 
 .cart-items-container .close-cart-btn {
@@ -608,15 +623,28 @@ button:hover {
   overflow-y: auto;
   z-index: 2000;
   transform: translateX(100%);
-  transition: transform 1.2s cubic-bezier(0.77, 0, 0.18, 1), opacity 0.5s;
+  transition: transform 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 1s ease-in-out, visibility 1s ease-in-out;
   opacity: 0;
+  visibility: hidden;
   pointer-events: none;
+  will-change: transform, opacity, visibility;
 }
 
 .favorite-container.active {
   transform: translateX(0);
   opacity: 1;
+  visibility: visible;
   pointer-events: auto;
+  transition: transform 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 1s ease-in-out, visibility 1s ease-in-out;
+}
+
+/* Favoriler kapanma animasyonu */
+.favorite-container.closing {
+  transform: translateX(100%);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: transform 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 1s ease-in-out, visibility 1s ease-in-out;
 }
 
 .favorite-container h2 {

@@ -157,7 +157,7 @@ ul {
 .hero {
   background: url("images/EcoHome_Essentials.webp") no-repeat center
     center/cover;
-  background-size: cover; /* Resmi kapsayacak şekilde ölçeklendirir */
+  background-size: cover;
   color: #fff;
   text-align: center;
   padding: 100px 0;

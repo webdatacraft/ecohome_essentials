@@ -117,12 +117,20 @@ ul {
   z-index: 10;
   max-height: none;
   overflow-y: visible;
+  transition: opacity 1.5s ease-out, transform 1.5s ease-out;
 }
 
 /* Menü açıldığında görünür */
 .nav.open ul {
   display: flex;
   background-color: #2e7d32;
+  opacity: 1;
+}
+
+/* Menü kapanırken animasyon */
+.nav.closing ul {
+  opacity: 0;
+  transition: opacity 1.5s ease-out, transform 1.5s ease-out;
 }
 
 .nav li {

@@ -239,16 +239,7 @@ if (cartBtn && cartItem) {
     });
   }
 
-  // Sayfa içindeki diğer yerlere tıklanınca sepetin kapanması
-  document.addEventListener("click", function (event) {
-    if (!cartItem.contains(event.target) && !cartBtn.contains(event.target)) {
-      // Yumuşak kapanma için
-      cartItem.classList.add("closing");
-      setTimeout(() => {
-        cartItem.classList.remove("active", "closing");
-      }, 1000);
-    }
-  });
+
 }
 
 if (!window.favoriteItems) {
@@ -442,23 +433,11 @@ if (favoriteBtn && favoriteContainerDiv) {
       // Animasyon tamamlandıktan sonra active sınıfını kaldır
       setTimeout(() => {
         favoriteContainerDiv.classList.remove("active", "closing");
-      }, 800); // CSS'deki transition süresi ile eşleşmeli
+      }, 1500); // CSS'deki transition süresi ile eşleşmeli
     });
   }
 
-  // Sayfa içinde başka bir yere tıklanınca favori kutusunu kapat
-  document.addEventListener("click", function (event) {
-    if (
-      !favoriteContainerDiv.contains(event.target) &&
-      !favoriteBtn.contains(event.target)
-    ) {
-      // Yumuşak kapanma için
-      favoriteContainerDiv.classList.add("closing");
-      setTimeout(() => {
-        favoriteContainerDiv.classList.remove("active", "closing");
-      }, 800);
-    }
-  });
+
 
   const cartBtn = document.getElementById("cart-btn");
   const favoriteContainerDiv = document.getElementById("favorite-container");
@@ -470,7 +449,7 @@ if (favoriteBtn && favoriteContainerDiv) {
         favoriteContainerDiv.classList.add("closing");
         setTimeout(() => {
           favoriteContainerDiv.classList.remove("active", "closing");
-        }, 800);
+        }, 1500);
       }
     });
   }
@@ -483,11 +462,44 @@ if (favoriteBtn && favoriteContainerDiv) {
         cartItem.classList.add("closing");
         setTimeout(() => {
           cartItem.classList.remove("active", "closing");
-        }, 1000);
+        }, 1500);
       }
     });
   }
 }
+
+// Tüm kapatma işlemleri için tek listener
+document.addEventListener("click", function (event) {
+  // Sepet kontrolü
+  if (!cartItem.contains(event.target) && !cartBtn.contains(event.target)) {
+    if (cartItem.classList.contains("active")) {
+      cartItem.classList.add("closing");
+      setTimeout(() => {
+        cartItem.classList.remove("active", "closing");
+      }, 1500);
+    }
+  }
+  
+  // Favoriler kontrolü
+  if (!favoriteContainerDiv.contains(event.target) && !favoriteBtn.contains(event.target)) {
+    if (favoriteContainerDiv.classList.contains("active")) {
+      favoriteContainerDiv.classList.add("closing");
+      setTimeout(() => {
+        favoriteContainerDiv.classList.remove("active", "closing");
+      }, 1500);
+    }
+  }
+  
+  // Menu kontrolü
+  if (!nav.contains(event.target) && !hamburger.contains(event.target)) {
+    if (nav.classList.contains("open")) {
+      nav.classList.add("closing");
+      setTimeout(() => {
+        nav.classList.remove("open", "closing");
+      }, 1500);
+    }
+  }
+});
 
 //ürünlerin yorum kodları
 const stars = document.querySelector(".bambu-detay-stars");
@@ -568,10 +580,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
     nav.addEventListener("click", function (e) {
       e.stopPropagation();
-    }); // Sayfadaki herhangi bir yere tıklanınca menü kapansın
+    });     // Sayfadaki herhangi bir yere tıklanınca menü kapansın
 
     document.addEventListener("click", function () {
-      nav.classList.remove("open");
+      if (!nav.contains(event.target) && !hamburger.contains(event.target)) {
+        if (nav.classList.contains("open")) {
+          nav.classList.add("closing");
+          setTimeout(() => {
+            nav.classList.remove("open", "closing");
+          }, 1500);
+        }
+      }
     });
   }
 });

@@ -4,7 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Yeşil Ev Ürünleri</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="preload"
+      href="styles.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript><link rel="stylesheet" href="styles.css" /></noscript>
+
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
       rel="stylesheet"
@@ -93,8 +100,7 @@
         <p>
           <strong
             >Gelecek nesillere daha yaşanabilir bir dünya bırakmak için
-            </strong
-            >
+          </strong>
         </p>
         <p><strong>🌿♻️</strong></p>
       </div>

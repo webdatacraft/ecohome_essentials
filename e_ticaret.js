@@ -238,8 +238,6 @@ if (cartBtn && cartItem) {
       }, 1000); // CSS'deki transition süresi ile eşleşmeli
     });
   }
-
-
 }
 
 if (!window.favoriteItems) {
@@ -437,8 +435,6 @@ if (favoriteBtn && favoriteContainerDiv) {
     });
   }
 
-
-
   const cartBtn = document.getElementById("cart-btn");
   const favoriteContainerDiv = document.getElementById("favorite-container");
 
@@ -479,9 +475,12 @@ document.addEventListener("click", function (event) {
       }, 1500);
     }
   }
-  
+
   // Favoriler kontrolü
-  if (!favoriteContainerDiv.contains(event.target) && !favoriteBtn.contains(event.target)) {
+  if (
+    !favoriteContainerDiv.contains(event.target) &&
+    !favoriteBtn.contains(event.target)
+  ) {
     if (favoriteContainerDiv.classList.contains("active")) {
       favoriteContainerDiv.classList.add("closing");
       setTimeout(() => {
@@ -489,8 +488,10 @@ document.addEventListener("click", function (event) {
       }, 1500);
     }
   }
-  
+
   // Menu kontrolü
+  const nav = document.querySelector("nav");
+  const hamburger = document.querySelector(".hamburger");
   if (!nav.contains(event.target) && !hamburger.contains(event.target)) {
     if (nav.classList.contains("open")) {
       nav.classList.add("closing");
@@ -580,7 +581,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     nav.addEventListener("click", function (e) {
       e.stopPropagation();
-    });     // Sayfadaki herhangi bir yere tıklanınca menü kapansın
+    }); // Sayfadaki herhangi bir yere tıklanınca menü kapansın
 
     document.addEventListener("click", function () {
       if (!nav.contains(event.target) && !hamburger.contains(event.target)) {
